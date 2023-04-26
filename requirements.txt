@@ -1,0 +1,4 @@
+Flask==2.1.0
+Flask-Assets==2.0
+Flask-SCSS==0.3
+webassets==2.0

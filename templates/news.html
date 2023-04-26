@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <style>
+        .news-container {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            margin: 20px 0;
+            padding-bottom: 20px;
+        }
+
+        .news-item {
+            flex: 0 0 auto;
+            width: 400px;
+            margin-right: 20px;
+            background-color: #f5f5f5;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+        }
+
+        .news-item h2 {
+            margin-top: 0;
+        }
+
+        .news-item p {
+            margin-bottom: 0;
+        }
+
+        .news-image {
+            background-size: cover;
+            background-position: center;
+            height: 200px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>News:</h1>
+    <div class="news-container">
+        <div class="news-item">
+            <p>"Real Madrid" beat "Liverpool" 2:5 at "Anfield"</p>
+             <div class="news-image" style="background-image: url('./static/images/news1.jpg');"></div>
+        </div>
+        <div class="news-item">
+            <p>"Manchester City" defeated "Bayern Munich" 3:0</p>
+            <div class="news-image" style="background-image: url('./static/images/news2.jpg');"></div>
+        </div>
+        <div class="news-item">
+            <p>"Inter" and "Benfica" played to a 3:3 draw</p>
+            <div class="news-image" style="background-image: url('./static/images/news3.jpg');"></div>
+        </div>
+        <div class="news-item">
+            <p>Real Madrid beat Barcelona 4:0</p>
+            <div class="news-image" style="background-image: url('./static/images/news4.jpg');"></div>
+        </div>
+    </div>
+    <button onclick="window.location.href='{{ url_for('index') }}'">Back</button>
+</body>
+</html>
+
+
+

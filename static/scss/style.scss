@@ -1,0 +1,8 @@
+function showDateTime() {
+    let now = new Date();
+    let datetime = now.toLocaleString();
+    document.getElementById("datetime").innerHTML = datetime;
+}
+
+showDateTime();
+setInterval(showDateTime, 1000);

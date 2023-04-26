@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+    <h1>Home Page</h1>
+    <p id="datetime"></p>
+    <p>Welcome to my home page!</p>
+    <button onclick="window.location.href='{{ url_for('index') }}'">Back</button>
+    <script>
+      function updateDateTime() {
+        var now = new Date();
+        var datetime = document.getElementById("datetime");
+        datetime.innerHTML = now.toLocaleString();
+      }
+
+      updateDateTime();
+      setInterval(updateDateTime, 1000);
+    </script>
+</body>
+</html>

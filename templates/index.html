@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+    <h1>Welcome to my website!</h1>
+    <p>Press "1" to go to the page and see the current time and date. Click on "2" to go to the "News" section:</p>
+    <button onclick="window.location.href='/home'">1</button>
+    <button onclick="window.location.href='/news'">2</button>
+</body>
+</html>
