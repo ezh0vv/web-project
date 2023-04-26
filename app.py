@@ -15,11 +15,10 @@ def home():
 @app.route('/news')
 def news():
     articles = [
-        {'title': 'Article 1', 'content': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'},
-        {'title': 'Article 2', 'content': 'Nullam gravida nibh eu eleifend ultricies.'},
-        {'title': 'Article 3', 'content': 'Praesent tristique mauris eu neque semper, at volutpat mauris blandit.'},
-        {'title': 'Article 4', 'content': 'Suspendisse ac turpis ut dolor consequat malesuada.'},
-        {'title': 'Article 5', 'content': 'Sed eget magna ut leo molestie fringilla.'},
+        {'title': 'Article 1', 'content': 'Real Madrid" beat "Liverpool" 2:5 at "Anfield".'},
+        {'title': 'Article 2', 'content': 'Manchester City" defeated "Bayern Munich" 3:0.'},
+        {'title': 'Article 3', 'content': '"Inter" and "Benfica" played to a 3:3 draw.'},
+        {'title': 'Article 4', 'content': '"Real Madrid" beat "Barcelona" 4:0.'}
     ]
     return render_template('news.html', articles=articles)
 
